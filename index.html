@@ -473,11 +473,12 @@ input[type="submit"]:hover {
         
     <!-- Password Input Field -->
     <div id="passwordInput" style="display: none;">
-        <form action="#" onsubmit="return redirectToSecretProject();">
-            <label for="password"><h4>Enter password:</h4></label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Submit">
-        </form>
+<form action="#" onsubmit="return redirectToSecretProject();">
+    <label for="password"><h4>Enter password:</h4></label>
+    <input type="password" id="password" name="password" required>
+    <input type="submit" value="Submit">
+</form>
+
     </div>
 
 <div class="content-section">
@@ -507,32 +508,32 @@ input[type="submit"]:hover {
     </footer>
 </div>
 
-    <script>
-        function toggleDescription(projectId) {
-            var projectDescription = document.getElementById(projectId);
-            projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
-        }
-
-        function showPasswordInput() {
-            var passwordInput = document.getElementById('passwordInput');
-            passwordInput.style.display = 'block';
-        }
-
-function redirectToSecretProject() {
-    var password = document.getElementById('password').value;
-    if (password.toLowerCase() === 'proton6105') {
-        window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
-        return true;
-    } else {
-        alert('Ignorance Is Bliss');
-        return false;
+<script>
+    function toggleDescription(projectId) {
+        var projectDescription = document.getElementById(projectId);
+        projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
     }
-}
-         document.querySelector('.recent-updates h5').addEventListener('click', function() {
-    // Toggle the display of the updates content
-    document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
-});
+
+    function showPasswordInput() {
+        var passwordInput = document.getElementById('passwordInput');
+        passwordInput.style.display = 'block';
+    }
+
+    function redirectToSecretProject() {
+        var password = document.getElementById('password').value;
+        if (password.toLowerCase() === 'proton6105') {
+            window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
+            return false; // Prevent form submission
+        } else {
+            alert('Ignorance Is Bliss');
+            return false; // Prevent form submission
         }
-    </script>
+    }
+
+    document.querySelector('.recent-updates h1').addEventListener('click', function() {
+        // Toggle the display of the updates content
+        document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
+    });
+</script>
 </body>
 </html>
