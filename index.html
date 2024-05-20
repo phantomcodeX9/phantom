@@ -517,12 +517,17 @@ input[type="submit"]:hover {
                          var passwordInput = document.getElementById('passwordInput');
                          passwordInput.style.display = 'block';
                   }
-                  
+
                   function redirectToSecretProject() {
-                         var password = document.getElementById('password').value;
-                         if (password.toLowerCase() === 'proton6105') {
-                                window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
-                         } else {
-                                alert('Ignorance Is Bliss'); } } document.querySelector('.recent-updates h5').addEventListener('click', function() { // Toggle the display of the updates content document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block'; }); </script>
+    var password = document.getElementById('password').value;
+    if (password.toLowerCase() === 'proton6105') {
+        window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
+        return true; // Add this to ensure the form submission is handled correctly
+    } else {
+        alert('Ignorance Is Bliss');
+        return false; // Add this to prevent the form submission
+    }
+}
+                  
 </body>
 </html>
