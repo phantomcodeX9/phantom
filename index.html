@@ -252,16 +252,37 @@ input[type="submit"]:hover {
     /* Your existing styles for the content section */
 }
 
+@keyframes neonGlow {
+    0% {
+        text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+    20% {
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+    40% {
+        text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
+    }
+    60% {
+        text-shadow: 0 0 5px #FF00FF, 0 0 10px #FF00FF, 0 0 20px #FF00FF, 0 0 30px #FF00FF;
+    }
+    80% {
+        text-shadow: 0 0 5px #FF4500, 0 0 10px #FF4500, 0 0 20px #FF4500, 0 0 30px #FF4500;
+    }
+    100% {
+        text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50;
+    }
+}
+
 header h1 {
     font-size: 36px;
     margin: 10px 0;
-    color: #4CAF50; /* Green color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-    transition: text-shadow 0.5s ease; /* Add transition effect for smooth glowing */
+    color: #4CAF50; /* Initial green color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Initial text shadow */
+    transition: text-shadow 0.5s ease; /* Smooth transition for the text shadow */
 }
 
 header h1:hover {
-    text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 50px #4CAF50, 0 0 60px #4CAF50;
+    animation: neonGlow 2s infinite; /* Apply the neon glow animation on hover */
 }
            
 .strawpoll-embed {
