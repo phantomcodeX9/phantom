@@ -473,7 +473,7 @@ input[type="submit"]:hover {
         
     <!-- Password Input Field -->
     <div id="passwordInput" style="display: none;">
-        <form action="#" onsubmit="redirectToSecretProject(); return false;">
+        <form action="#" onsubmit="return redirectToSecretProject();">
             <label for="password"><h4>Enter password:</h4></label>
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Submit">
@@ -506,28 +506,33 @@ input[type="submit"]:hover {
         <p>UPI ID: soon...</p>
     </footer>
 </div>
-           
-           <script>
-              function toggleDescription(projectId) {
-                     var projectDescription = document.getElementById(projectId);
-                     projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
-              }
-                  
-                  function showPasswordInput() {
-                         var passwordInput = document.getElementById('passwordInput');
-                         passwordInput.style.display = 'block';
-                  }
 
-                  function redirectToSecretProject() {
+    <script>
+        function toggleDescription(projectId) {
+            var projectDescription = document.getElementById(projectId);
+            projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function showPasswordInput() {
+            var passwordInput = document.getElementById('passwordInput');
+            passwordInput.style.display = 'block';
+        }
+
+function redirectToSecretProject() {
     var password = document.getElementById('password').value;
     if (password.toLowerCase() === 'proton6105') {
         window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
-        return true; // Add this to ensure the form submission is handled correctly
+        return true;
     } else {
         alert('Ignorance Is Bliss');
-        return false; // Add this to prevent the form submission
+        return false;
     }
 }
-                  
+         document.querySelector('.recent-updates h5').addEventListener('click', function() {
+    // Toggle the display of the updates content
+    document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
+});
+        }
+    </script>
 </body>
 </html>
