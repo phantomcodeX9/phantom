@@ -14,7 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHANTOMX9 Projects</title>
     <style>
-        body {
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
     background-image: url('phyhexa.jpg');
     background-position: center;
     background-size: cover;
@@ -47,7 +53,7 @@ h1 {
 }
 
 h5 {
-    font-size: 36px;
+    font-size: 38px;
     margin: 10px 0;
     color: #35e8dc;
     font-family: Algerian, serif;
@@ -77,20 +83,19 @@ p {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    position: relative;
-    animation: fadeIn 2s ease; /* Add fade-in animation */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .project {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark gray background for project boxes with transparency */
+    flex: 1 1 calc(50% - 20px);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* White shadow */
-    cursor: pointer; /* Add cursor pointer for clickable effect */
-    transition: transform 0.5s ease; /* Add transition effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
 .project:hover {
@@ -235,12 +240,7 @@ input[type="submit"]:hover {
     margin-left: 270px; /* Adjust according to sidebar width */
 }
 
-.feedback-section-container {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-top: auto; /* Pushes the container to the bottom of its parent */
-}
+z
 
 .feedback-section {
     width: 90%; /* Adjust width as needed */
@@ -328,7 +328,7 @@ header h1:hover {
 }
 
 .glowing-text {
-  font-size: 35px;
+  font-size: 33px;
   margin: 10px 0;
   color: #35e8dc; /* Green color for headings */
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
