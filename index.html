@@ -206,9 +206,8 @@
             top: 0;
             left: 0;
             height: 100%;
-            width: 250px;
-            margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0);
+            width: 270px;
+            background-color: rgba(0, 0, 0, 0.6);
             padding: 20px;
             overflow-y: auto;
             z-index: 1;
@@ -219,6 +218,7 @@
 
         .logo {
             margin-bottom: 20px;
+            margin-top: 50px;
             text-align: center;
         }
 
@@ -342,6 +342,40 @@
             }
         }
 
+        .project {
+  perspective: 1000px; /* add perspective to create a 3D space */
+  position: relative;
+}
+
+.project-inner {
+  transition: transform 0.3s; /* add transition to the inner element */
+  transform-style: preserve-3d; /* enable 3D transforms */
+}
+
+.project-inner.flip {
+  transform: rotateY(180deg); /* flip the inner element */
+}
+
+.project-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  transform: rotateY(180deg); /* initially flip the description */
+  backface-visibility: hidden; /* hide the backface of the description */
+}
+
+.project:hover .project-inner {
+  transform: rotateY(180deg); /* flip the inner element on hover */
+}
+
+.project:hover .project-description {
+  transform: rotateY(0deg); /* show the description on hover */
+}
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .sidebar {
@@ -396,7 +430,7 @@
             }
 
             h5, h3, h4, p {
-                font-size: 14px;
+                font-size: 16px;
             }
 
             h1 {
@@ -632,6 +666,14 @@
                 return false;
             }
         }
+
+        document.querySelector('.project-container').addEventListener('click', (event) => {
+  const target = event.target.closest('.project');
+  if (target) {
+    target.classList.toggle('flip');
+  }
+});
+
 
         document.querySelector('.recent-updates h1').addEventListener('click', function() {
             document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
