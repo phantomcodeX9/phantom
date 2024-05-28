@@ -1,359 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNPEF203K5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNPEF203K5');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNPEF203K5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XNPEF203K5');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHANTOMX9 Projects</title>
     <style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    background-image: url('phyhexa.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed; /* Ensure the background image remains fixed */
-    color: #ccc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 20px;
-    margin: 0;
-    transition: background-color 0.5s ease; /* Add transition effect */
-}
+        body {
+            background-image: url('phyhexa.jpg');
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #ccc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            margin: 0;
+            transition: background-color 0.5s ease;
+        }
 
-body:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Add a subtle background color on hover */
-}
+        body:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px; /* Increase font size */
-    font-weight: bold; /* Add bold font weight */
-    color: #4CAF50; /* Green color for headings */
-    animation: fadeIn 2s ease; /* Add fade-in animation */
-}
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            animation: fadeIn 2s ease;
+        }
 
-h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    color: #4CAF50; /* Green color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-h5 {
-    font-size: 38px;
-    margin: 10px 0;
-    color: #35e8dc;
-    font-family: Algerian, serif;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        h5 {
+            font-size: 38px;
+            margin: 10px 0;
+            color: #35e8dc;
+            font-family: Algerian, serif;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-h3 {
-    font-size: 25px;
-    margin: 10px 0;
-    color: #ff0028; /* Red color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        h3 {
+            font-size: 25px;
+            margin: 10px 0;
+            color: #ff0028;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-h4 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #4CAF50; /* Green color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        h4 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ccc;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-.project {
-    flex: 1 1 calc(50% - 20px);
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    transition: transform 0.5s ease;
-}
+        .project {
+            flex: 1 1 calc(50% - 20px);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
 
-.project:hover {
-    transform: scale(1.05); /* Add hover effect */
-}
+        .project:hover {
+            transform: scale(1.05);
+        }
 
-.project img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
 
-.project-description {
-    display: none; /* Hide project description by default */
-    animation: fadeIn 2s ease; /* Add fade-in animation */
-}
+        .project-description {
+            display: none;
+            animation: fadeIn 2s ease;
+        }
 
-form {
-    margin-top: 30px;
-    border-top: 1px solid #666; /* Gray border */
-    padding-top: 20px;
-    animation: fadeIn 2s ease; /* Add fade-in animation */
-}
+        form {
+            margin-top: 30px;
+            border-top: 1px solid #666;
+            padding-top: 20px;
+            animation: fadeIn 2s ease;
+        }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #4CAF50; /* Green color for labels */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #666; /* Gray border */
-    background-color: rgba(0, 0, 0, 0.5); /* Dark gray background with transparency */
-    color: #ccc; /* Light text color */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #666;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ccc;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-input[type="submit"] {
-    background-color: #4CAF50; /* Green submit button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-input[type="submit"]:hover {
-    background-color: #45a049; /* Darker green hover color */
-}
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
 
-.red-text {
-    color: red; /* Red color for PHANTOMX9 */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .red-text {
+            color: red;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.blue-text {
-    color: rgb(243,197,77); /* Red color for PHANTOMX9 */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .blue-text {
+            color: rgb(243, 197, 77);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.secret-project {
-    background-image: linear-gradient(to right, #68D391, #48BB78, #2F9D66);
-    padding: 10px 50px;
-    border-radius: 20px;
-    cursor: pointer;
-    width: fit-content;
-    margin: 30px auto;
-    font-family: Algerian, serif;
-    font-size: 24px;
-    color: white;
-    opacity: 1;
-    box-shadow: 0px 10px 15px rgba(72, 187, 120, 0.5), 0px 10px 10px rgba(72, 187, 120, 0.5);
-    transition: all 0.3s ease-in-out;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .secret-project {
+            background-image: linear-gradient(to right, #68D391, #48BB78, #2F9D66);
+            padding: 10px 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: fit-content;
+            margin: 30px auto;
+            font-family: Algerian, serif;
+            font-size: 24px;
+            color: white;
+            opacity: 1;
+            box-shadow: 0px 10px 15px rgba(72, 187, 120, 0.5), 0px 10px 10px rgba(72, 187, 120, 0.5);
+            transition: all 0.3s ease-in-out;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.secret-project:hover {
-    background-image: linear-gradient(to bottom right, #68D391, #48BB78, #2F9D66);
-    box-shadow: 0px 15px 20px rgba(72, 187, 120, 0.5), 0px 15px 15px rgba(72, 187, 120, 0.5);
-}
+        .secret-project:hover {
+            background-image: linear-gradient(to bottom right, #68D391, #48BB78, #2F9D66);
+            box-shadow: 0px 15px 20px rgba(72, 187, 120, 0.5), 0px 15px 15px rgba(72, 187, 120, 0.5);
+        }
 
-.progress-bar-container {
-    width: 90%;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Changed to black background */
-    border-radius: 5px;
-    overflow: hidden;
-    color: white; /* Changed text color to white */
-    padding: 10px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .progress-bar-container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            overflow: hidden;
+            color: white;
+            padding: 10px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.progress-bar {
-    width: 20%; /* Adjust width dynamically using inline style or JavaScript */
-    height: 20px;
-    background-color: #1C39BB; /* persian blue color for progress */
-    border-radius: 5px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .progress-bar {
+            width: 20%;
+            height: 20px;
+            background-color: #1C39BB;
+            border-radius: 5px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 250px; /* Adjust width as needed */
-    margin-top: 50px;
-    background-color: rgba(0, 0, 0, 0); /* Dark gray background with transparency */
-    padding: 20px;
-    overflow-y: auto; /* Allow vertical scrolling if content overflows */
-    z-index: 1; /* Ensure sidebar stays above other content */
-    color: #ccc;
-    text-align: center;/* Light text color */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1;
+            color: #ccc;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.logo {
-    margin-bottom: 20px;
-    text-align: center;
-}
+        .logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
 
-.logo img {
-    max-width: 100%;
-}
+        .logo img {
+            max-width: 100%;
+        }
 
-.name {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .name {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-/* Adjust main content to accommodate sidebar */
-.main-content {
-    margin-left: 270px; /* Adjust according to sidebar width */
-}
+        .main-content {
+            margin-left: 270px;
+        }
 
-z
+        .feedback-section {
+            width: 90%;
+            margin-top: 20px;
+        }
 
-.feedback-section {
-    width: 90%; /* Adjust width as needed */
-    margin-top: 20px; /* Add some space */
-}
+        .content-section {
+            width: 100%;
+        }
 
-.content-section {
-    width: 100%; /* Adjust width as needed */
-    /* Your existing styles for the content section */
-}
+        header h1 {
+            font-size: 36px;
+            margin: 10px 0;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: text-shadow 0.5s ease;
+        }
 
-header h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    color: #4CAF50; /* Green color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-    transition: text-shadow 0.5s ease; /* Add transition effect for smooth glowing */
-}
+        header h1:hover {
+            text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 50px #4CAF50, 0 0 60px #4CAF50;
+        }
 
-header h1:hover {
-    text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 50px #4CAF50, 0 0 60px #4CAF50;
-}
-           
-.strawpoll-embed {
-    max-width: 640px;
-    width: 100%;
-    margin-top: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns the content to the left */
-    overflow-y: auto;
-    max-height: 300px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .strawpoll-embed {
+            max-width: 640px;
+            width: 100%;
+            margin-top: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            overflow-y: auto;
+            max-height: 300px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.team-members {
-    margin-top: 20px;
-    line-height: 1.2; /* Adjust line height */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .team-members {
+            margin-top: 20px;
+            line-height: 1.2;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.team-members p {
-    margin: 5px 0; /* Adjust margin for team member names */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
-.recent-updates {
-    margin-top: 20px;
-    cursor: pointer;
-}
+        .team-members p {
+            margin: 5px 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.recent-updates-content {
-    display: none;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+        .recent-updates {
+            margin-top: 20px;
+            cursor: pointer;
+        }
 
-.recent-updates:hover .recent-updates-content {
-    display: block;
-}
-           
-/* Add the glow effect for "Recent Updates" heading */
-.recent-updates h1 {
-    font-size: 36px;
-    margin: 10px 0;
-    color: #4CAF50; /* Green color for headings */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-    transition: text-shadow 0.5s ease; /* Add transition effect for smooth glowing */
-}
+        .recent-updates-content {
+            display: none;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-.recent-updates h1:hover {
-    text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 0px #4CAF50, 0 0 0px #4CAF50, 0 0 0px #4CAF50;
-}
+        .recent-updates:hover .recent-updates-content {
+            display: block;
+        }
 
-.feedback-container {
-    width: 90%;
-    margin: 30px auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Changed to black background */
-    border-radius: 5px;
-    overflow: hidden;
-    color: white; /* Changed text color to white */
-    padding: 30px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add text shadow */
-}
+        .recent-updates h1 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #4CAF50;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: text-shadow 0.5s ease;
+        }
 
-.glowing-text {
-  font-size: 33px;
-  margin: 10px 0;
-  color: #35e8dc; /* Green color for headings */
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
-  transition: text-shadow 0.5s ease; /* Add transition effect for smooth glowing */
-}
+        .recent-updates h1:hover {
+            text-shadow: 0 0 5px #4CAF50, 0 0 10px #4CAF50, 0 0 20px #4CAF50, 0 0 0px #4CAF50, 0 0 0px #4CAF50, 0 0 0px #4CAF50;
+        }
 
-.glowing-text:hover {
-  text-shadow: 0 0 1px #35e8dc, 0 0 0px #35e8dc, 0 0 0px #35e8dc, 0 0 30px #35e8dc, 0 0 0px #35e8dc, 0 0 0px #35e8dc;
-}
+        .feedback-container {
+            width: 90%;
+            margin: 30px auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            overflow: hidden;
+            color: white;
+            padding: 30px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+        .glowing-text {
+            font-size: 33px;
+            margin: 10px 0;
+            color: #35e8dc;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            transition: text-shadow 0.5s ease;
+        }
+
+        .glowing-text:hover {
+            text-shadow: 0 0 1px #35e8dc, 0 0 0px #35e8dc, 0 0 0px #35e8dc, 0 0 30px #35e8dc, 0 0 0px #35e8dc, 0 0 0px #35e8dc;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                margin-top: 20px;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .project-container {
+                flex-direction: column;
+            }
+
+            .project {
+                flex: 1 1 100%;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .secret-project {
+                font-size: 18px;
+                padding: 10px 20px;
+            }
+
+            h5, h3, h4, p {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            .secret-project {
+                font-size: 14px;
+                padding: 10px 10px;
+            }
+
+            h5, h3, h4, p {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            .project img {
+                max-height: 150px;
+            }
+
+            .progress-bar {
+                height: 10px;
+            }
+
+            .sidebar {
+                padding: 10px;
+            }
+
+            .logo img {
+                max-width: 80%;
+            }
+
+            .name {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
-       <!-- Hitsteps TRACKING CODE - Manual 2024-05-03 - DO NOT CHANGE -->
-<script type="text/javascript">(function(){var hstc=document.createElement('script'); hstc.src='https://edgecdn.dev/code?code=fbc92205d1c4ecfc5b36cc58b7ad3cd4';hstc.async=true;var htssc = document.getElementsByTagName('script')[0];htssc.parentNode.insertBefore(hstc, htssc);})();
-</script><noscript><a href="http://www.hitsteps.com/"><img src="//edgecdn.dev/code?mode=img&amp;code=fbc92205d1c4ecfc5b36cc58b7ad3cd4" alt="Realtime website tracking" width="1" height="1" />web stats</a></noscript>
 <body>
-        <!-- Sidebar -->
+    <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">
             <img src="logo.jpeg" alt="Your Logo">
@@ -362,229 +439,203 @@ header h1:hover {
             <h5 class="glowing-text">PHANTOMX9</h5>
         </div>
         <div class="social-links">
-            <!-- Replace '#' with your actual social media links -->
             <a href="#">Telegram</a>
             <a href="#">Discord</a>
             <a href="#">Instagram</a>
-
-        <div class="team-members">
-        <p>Members:</p>
-        <P>🔵PHANTOMX9 (OWNER👑)</P>
-        <p>🔵SINNER3116 (PIRATE🏴‍☠️)</p>
-        <P>"MAIL TO CONTRIBUTE"</P>
-    </div>
-        <script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));</script><a data-type="countdown" data-id="5249561" class="tickcounter" style="display:block; left:0; width:100%; height:0; position:relative; padding-bottom:18%; margin:0 auto;" title="WEB UPDATE X SINNER3116" href="//www.tickcounter.com/">WEB UPDATE X SINNER3116</a>
-
-        <div class="recent-updates">
-        <h1>Recent Updates 🔽</h1>
-        <div class="recent-updates-content">
-            <!-- add your update content here -->
-            <p>🔹Animations Added ✨...</p>
-            <p>🔹In next update i will be trying to optimise this website for phone.</p>
-            <!-- add more updates as needed -->
         </div>
-    </div>
-</div>
-
+        <div class="team-members">
+            <p>Members:</p>
+            <p>🔵PHANTOMX9 (OWNER👑)</p>
+            <p>🔵SINNER3116 (PIRATE🏴‍☠️)</p>
+            <p>"MAIL TO CONTRIBUTE"</p>
+        </div>
+        <div class="recent-updates">
+            <h1>Recent Updates 🔽</h1>
+            <div class="recent-updates-content">
+                <p>🔹Animations Added ✨...</p>
+                <p>🔹In next update i will be trying to optimise this website for phone.</p>
+            </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="main-content - ">
-    <header>
-        <h1>Upcoming Projects</h1>
-        <p>Welcome to <span class="red-text">PHANTOMX9</span>'s project tracking website. Here you can find information about my upcoming projects.</p>
-    </header>
-    
-    <!-- Project Section -->
-    <div class="project-container">
-        <!-- Project 1 -->
-        <div class="project" onclick="toggleDescription('project1')">
-            <img src="8U2F_GK-J70-HD.jpg" alt="QuantumQuark">
-            <h2>QuantumQuark</h2>
-            <div class="progress-bar-container">
-            <div class="progress-bar" style="background-color: green; height: 6px; width: 90%; margin-bottom: 6px;"></div>
+    <div class="main-content">
+        <header>
+            <h1>Upcoming Projects</h1>
+            <p>Welcome to <span class="red-text">PHANTOMX9</span>'s project tracking website. Here you can find information about my upcoming projects.</p>
+        </header>
+
+        <!-- Project Section -->
+        <div class="project-container">
+            <div class="project" onclick="toggleDescription('project1')">
+                <img src="8U2F_GK-J70-HD.jpg" alt="QuantumQuark">
+                <h2>QuantumQuark</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="background-color: green; height: 6px; width: 90%; margin-bottom: 6px;"></div>
+                </div>
+                <div class="project-description" id="project1">
+                    <p>Start Date: June 1, 2024</p>
+                    <p>Expected End Date: June 30, 2024</p>
+                    <p>INFO: completed🎉!!,Read Footer to get access</p>
+                    <ul>
+                        <li>Custom Data Q&A (already many of these on the internet)</li>
+                        <li>Accepts files(30mb),use botpress to build your own,I'll be providing the layout.</li>
+                        <li>Currently supported: txt pdf</li>
+                        <li>Currently supports intake of 100 messages. As soon as botpress versions become affordable I will upgrade it to 10K message intake</li>
+                    </ul>
+                </div>
             </div>
-            <div class="project-description" id="project1">
-                <p>Start Date: June 1, 2024</p>
-                <p>Expected End Date: June 30, 2024</p>
-                <p>INFO: completed🎉!!,Read Footer to get access</p>
-                <ul>
-                    <li>Custom Data Q&A (already many of these on the internet)</li>
-                    <li>Accepts files(30mb),use botpress to build your own,I'll be providing the layout.</li>
-                    <li>Currently supported: txt pdf</li>
-                    <li>Currently supports intake of 100 messages. As soon as botpress versions become affordable I will upgrade it to 10K message intake</li>
-                </ul>
+
+            <div class="project" onclick="toggleDescription('project2')">
+                <img src="wxy7utVxc7k-HD.jpg" alt="ChatFusionX">
+                <h2>ChatFusionX</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="background-color: green; height: 6px; width: 30%; margin-bottom: 6px;"></div>
+                </div>
+                <div class="project-description" id="project2">
+                    <p>Start Date: June 15, 2024</p>
+                    <p>Expected End Date: July 1, 2024</p>
+                    <p>INFO:</p>
+                    <ul>
+                        <li>Supports txt files, machine-readable json</li>
+                        <li>Learns the replying pattern of the preferred sender/receiver</li>
+                        <li>Dataset of 3000 messages will be preferred for better accuracy</li>
+                        <li>Can reply on behalf of the person and act the way they possibly will in different scenarios</li>
+                        <li>Works on "QuantumQuark" model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" onclick="toggleDescription('project3')">
+                <img src="MaverickMastery.jpeg" alt="MaverickMastery">
+                <h2>MaverickMastery</h2>
+                <div class="progress-bar-container"></div>
+                <div class="project-description" id="project3">
+                    <p>Start Date: April 1, 2024</p>
+                    <p>Expected End Date: October 31, 2024</p>
+                    <p>INFO:(for all jee/neet aspirants)</p>
+                    <ul>
+                        <li>SOON... wait will be worth it</li>
+                        <li>Taking Piracy to it's peak</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" onclick="toggleDescription('project4')">
+                <img src="PhoenixTechNest.jpeg" alt="PhoenixTechNest">
+                <h2><span class="blue-text">PhoenixTechNest</span></h2>
+                <div class="progress-bar-container"></div>
+                <div class="project-description" id="project4">
+                    <p>Start Date: September 1, 2024</p>
+                    <p>Expected End Date: September 31, 2024</p>
+                    <p>INFO:(Not sure if this will be public)</p>
+                    <ul>
+                        <li>Some of the most crazy and useful tech web, apps, extensions</li>
+                        <li>Will surely save you thousands.</li>
+                        <li>NOT SURE IF THIS WILL BE AVAILABLE FOR EVERYONE TO PREVENT MISUSE AND WELLBEING OF THIS SITE</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" onclick="toggleDescription('project5')">
+                <img src="InfinityVault.jpeg" alt="InfinityVault">
+                <h2>InfinityVault</h2>
+                <div class="progress-bar-container"></div>
+                <div class="project-description" id="project5">
+                    <p>Start Date: May 1, 2025</p>
+                    <p>Expected End Date: November 30, 2025</p>
+                    <p>INFO:</p>
+                    <ul>
+                        <li>SOON...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project" onclick="toggleDescription('project6')">
+                <img src="shadowcipher.png" alt="ShadowCipher">
+                <h2>ShadowCipher</h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+                <div class="project-description" id="project6">
+                    <p>Start Date: March 1, 2025</p>
+                    <p>Expected End Date: September 30, 2025</p>
+                    <p>INFO:</p>
+                    <ul>
+                        <li>Room for The new project discusions and improvement's</li>
+                        <li>put your suggestions down.</li>
+                        <li>SOON...</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project" onclick="toggleDescription('project2')">
-            <img src="wxy7utVxc7k-HD.jpg" alt="ChatFusionX">
-            <h2>ChatFusionX</h2>
-            <div class="progress-bar-container">
-            <div class="progress-bar" style="background-color: green; height: 6px; width: 30%; margin-bottom: 6px;"></div>
-            </div>
-            <div class="project-description" id="project2">
-                <p>Start Date: June 15, 2024</p>
-                <p>Expected End Date: July 1, 2024</p>
-                <p>INFO:</p>
-                <ul>
-                    <li>Supports txt files, machine-readable json</li>
-                    <li>Learns the replying pattern of the preferred sender/receiver</li>
-                    <li>Dataset of 3000 messages will be preferred for better accuracy</li>
-                    <li>Can reply on behalf of the person and act the way they possibly will in different scenarios</li>
-                    <li>Works on "QuantumQuark" model</li>
-                </ul>
-            </div>
+        <div class="secret-project" onclick="showPasswordInput()">
+            Top Secret
         </div>
 
-        <!-- Project 3 -->
-        <div class="project" onclick="toggleDescription('project3')">
-            <img src="MaverickMastery.jpeg" alt="MaverickMastery">
-            <h2>MaverickMastery</h2>
-            <div class="progress-bar-container">
-                <!-- No progress bar for this project -->
-            </div>
-            <div class="project-description" id="project3">
-                <p>Start Date: April 1, 2024</p>
-                <p>Expected End Date: October 31, 2024</p>
-                <p>INFO:(for all jee/neet aspirants)</p>
-                <ul>
-                    <li>SOON... wait will be worth it</li>
-                    <li>Taking Piracy to it's peak</li>
-                </ul>
-            </div>
+        <div id="passwordInput" style="display: none;">
+            <form action="#" onsubmit="return redirectToSecretProject();">
+                <label for="password"><h4>Enter password:</h4></label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Submit">
+            </form>
         </div>
 
-        <!-- Project 4 -->
-        <div class="project" onclick="toggleDescription('project4')">
-            <img src="PhoenixTechNest.jpeg" alt="PhoenixTechNest">
-            <h2><span class="blue-text">PhoenixTechNest</span></h2>
-            <div class="progress-bar-container">
-                <!-- No progress bar for this project -->
-            </div>
-            <div class="project-description" id="project4">
-                <p>Start Date: September 1, 2024</p>
-                <p>Expected End Date: September 31, 2024</p>
-                <p>INFO:(Not sure if this will be public)</p>
-                <ul>
-                    <li>Some of the most crazy and useful tech web, apps, extensions</li>
-                    <li>Will surely save you thousands.</li>
-                    <li>NOT SURE IF THIS WILL BE AVAILABLE FOR EVERYONE TO PREVENT MISUSE AND WELLBEING OF THIS SITE</li>
-                </ul>
-            </div>
-        </div>
- 
-        <!-- Project 5 -->
-        <div class="project" onclick="toggleDescription('project5')">
-            <img src="InfinityVault.jpeg" alt="InfinityVault">
-            <h2>InfinityVault</h2>
-            <div class="progress-bar-container">
-                <!-- No progress bar for this project -->
-            </div>
-            <div class="project-description" id="project5">
-                <p>Start Date: May 1, 2025</p>
-                <p>Expected End Date: November 30, 2025</p>
-                <p>INFO:</p>
-                <ul>
-                    <li>SOON...</li>
-                </ul>
-            </div>
-        </div>
+        <div class="content-section">
+            <div class="feedback-section-container">
+                <div class="feedback-container">
+                    <div class="feedback-section">
+                        <form action="https://formspree.io/f/mjvnleop" method="POST">
+                            <h3>Suggestions & Feedback (It matters a lot)</h3>
+                            <label for="email"><h4>Your email:</h4></label>
+                            <input type="email" id="email" name="email">
+                            <label for="message"><h4>Your feedback & suggestions: "Let me Know about the project you are waiting".</h4></label>
+                            <textarea id="message" name="message"></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
 
-        <!-- Project 6 -->
-        <div class="project" onclick="toggleDescription('project6')">
-            <img src="shadowcipher.png" alt="ShadowCipher">
-            <h2>ShadowCipher</h2>
-            <div class="progress-bar-container">
-                <div class="progress-bar" style="width: 0%;"></div> <!-- Adjust width dynamically based on funding -->
-            </div>
-            <div class="project-description" id="project6">
-                <p>Start Date: March 1, 2025</p>
-                <p>Expected End Date: September 30, 2025</p>
-                <p>INFO:</p>
-                <ul>
-                    <li>Room for The new project discusions and improvement's</li>
-                    <li>put your suggestions down.</li>
-                    <li>SOON...</li>
-                </ul>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 5%;"></div>
+                    <h4>200/8000 Fundings Available!!</h4>
+                </div>
+
+                <footer>
+                    <p>&copy; 2024 PHANTOMX9. All rights reserved, owner: phantomcodex9@gmail.com.</p>
+                    <p>**DUE TO LOW FUNDS CURRENTLY I DON'T HAVE ANY SERVER TO HOST OUR MODELS ON LARGE SCALE BUT I CAN GIVE ACCESS TO LIMITED NUMBER OF PEOPLES JUST DROP THE NAME OF MODEL/PROJECT IN FEEDBACK WITH YOUR Gmail.**</p>
+                    <p>UPI ID: soon...</p>
+                </footer>
             </div>
         </div>
     </div>
 
-    
-    <!-- Secret Project Section -->
-    <div class="secret-project" onclick="showPasswordInput()">
-        Top Secret
-    </div>
-        
-    <!-- Password Input Field -->
-    <div id="passwordInput" style="display: none;">
-<form action="#" onsubmit="return redirectToSecretProject();">
-    <label for="password"><h4>Enter password:</h4></label>
-    <input type="password" id="password" name="password" required>
-    <input type="submit" value="Submit">
-</form>
-
-    </div>
-
-<div class="content-section">
-    <!-- Feedback and Suggestion Section -->
-<div class="feedback-section-container">
-    <div class="feedback-container">
-  <div class="feedback-section">
-    <form action="https://formspree.io/f/mjvnleop" method="POST">
-      <h3>Suggestions & Feedback (It matters a lot)</h3>
-      <label for="email"><h4>Your email:</h4></label>
-      <input type="email" id="email" name="email">
-      <label for="message"><h4>Your feedback & suggestions: "Let me Know about the project you are waiting".</h4></label>
-      <textarea id="message" name="message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
-       
-         <!-- Progress Bar for QuantumQuark Funding -->
-    <div class="progress-bar-container">
-        <div class="progress-bar" style="width: 5%;"></div>
-        <h4>200/8000 Fundings Available!!</h4>
-    </div>
-
-    
-    <footer>
-        <p>&copy; 2024 PHANTOMX9. All rights reserved, owner: phantomcodex9@gmail.com.</p>
-        <p>**DUE TO LOW FUNDS CURRENTLY I DON'T HAVE ANY SERVER TO HOST OUR MODELS ON LARGE SCALE BUT I CAN GIVE ACCESS TO LIMITED NUMBER OF PEOPLES JUST DROP THE NAME OF MODEL/PROJECT IN FEEDBACK WITH YOUR Gmail.**</p>
-        <p>UPI ID: soon...</p>
-    </footer>
-</div>
-
-<script>
-    function toggleDescription(projectId) {
-        var projectDescription = document.getElementById(projectId);
-        projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
-    }
-
-    function showPasswordInput() {
-        var passwordInput = document.getElementById('passwordInput');
-        passwordInput.style.display = 'block';
-    }
-
-    function redirectToSecretProject() {
-        var password = document.getElementById('password').value;
-        if (password.toLowerCase() === 'proton6105') {
-            window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
-            return false; // Prevent form submission
-        } else {
-            alert('Ignorance Is Bliss');
-            return false; // Prevent form submission
+    <script>
+        function toggleDescription(projectId) {
+            var projectDescription = document.getElementById(projectId);
+            projectDescription.style.display = (projectDescription.style.display === 'block') ? 'none' : 'block';
         }
-    }
 
-    document.querySelector('.recent-updates h1').addEventListener('click', function() {
-        // Toggle the display of the updates content
-        document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
-    });
-</script>
+        function showPasswordInput() {
+            var passwordInput = document.getElementById('passwordInput');
+            passwordInput.style.display = 'block';
+        }
+
+        function redirectToSecretProject() {
+            var password = document.getElementById('password').value;
+            if (password.toLowerCase() === 'proton6105') {
+                window.location.href = 'https://youtu.be/hjBfswKssB8?si=-WP122e4eGRV7kIN';
+                return false;
+            } else {
+                alert('Ignorance Is Bliss');
+                return false;
+            }
+        }
+
+        document.querySelector('.recent-updates h1').addEventListener('click', function() {
+            document.querySelector('.recent-updates-content').style.display = (document.querySelector('.recent-updates-content').style.display === 'block') ? 'none' : 'block';
+        });
+    </script>
 </body>
 </html>
